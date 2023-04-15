@@ -1,7 +1,0 @@
-[tool.black]
-target-version = ["py39"]
-line-length = 120
-
-[tool.isort]
-py_version = 39
-line_length = 120
