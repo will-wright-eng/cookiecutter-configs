@@ -2,6 +2,8 @@
 
 A method I use frequently is generating project boilerplate code using [cookiecutter](https://github.com/cookiecutter/cookiecutter), which allows for all instances to be templated using jinja syntax
 
+## for example
+
 `pyproject.toml`
 ```toml
 [tool.black]
@@ -40,3 +42,28 @@ along with your `cookiecutter.json` file
 
     max-line-length = {{ cookiecutter.line_length }}
 
+## execution
+
+```bash
+python3 -m pip install --user cookiecutter
+
+```
+
+`directory structure`
+
+```bash
+$tree . -a
+.
+├── .gitignore
+├── README.md
+├── cookiecutter.json
+└── project-cc-template
+    └── {{ cookiecutter.project_slug }}
+        ├── .black
+        ├── .flake8
+        ├── .isort.cfg
+        ├── .pylintrc
+        └── pyproject.toml
+```
+
+- [cookiecutter docs](https://cookiecutter.readthedocs.io/en/stable/installation.html)
