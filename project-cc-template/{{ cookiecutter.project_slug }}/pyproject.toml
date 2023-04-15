@@ -1,0 +1,7 @@
+[tool.black]
+target-version = ["py39"]
+line-length = {{ cookiecutter.line_length }}
+
+[tool.isort]
+py_version = 39
+line_length = {{ cookiecutter.line_length }}
